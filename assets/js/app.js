@@ -60,7 +60,7 @@ let main = document.querySelector("main");
 
 window.addEventListener("scroll", () => {
   console.log();
-  
+
   if (this.scrollY > 118) {
     header.classList.add("sticky");
     main.classList.add("main_fixed");
@@ -96,6 +96,61 @@ const servicesSlider = new Swiper(".projects_swiper", {
     },
     0: {
       slidesPerView: 1,
+    },
+  },
+});
+
+const blogs = new Swiper(".blogs_slider", {
+  spaceBetween: 16,
+  centeredSlides: true,
+  slidesPerView: 3,
+  loop: true,
+  speed: 1500,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    350: {
+      slidesPerView: 1,
+    },
+    0: {
+      slidesPerView: 1,
+    },
+  },
+});
+
+var partnersSlider = new Swiper(".partnersSlider", {
+  loop: true,
+  slidesPerView: "auto",
+  spaceBetween: 12,
+  speed: 1000,
+  pagination: {
+    el: ".partnersPagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    991: {
+      slidesPerView: 5,
+    },
+    1400: {
+      slidesPerView: 6,
     },
   },
 });

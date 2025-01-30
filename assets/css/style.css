@@ -209,11 +209,30 @@ header nav .actions {
   align-items: center;
   gap: 12px;
 }
+header nav .actions .company_file {
+  padding: 6px 24px;
+  color: #fff;
+  background: #231f20;
+  border-radius: 40px;
+  transition: 0.3s ease-in-out;
+}
+header nav .actions .company_file:hover {
+  background: #ee2a7b;
+}
 header nav .actions button {
   color: #231f20;
   font-weight: 500;
   font-size: 1.1rem;
   line-height: normal;
+  height: 39.2px;
+  width: 39.2px;
+  border-radius: 50%;
+  border: 1px solid #231f20;
+  transition: 0.3s ease-in-out;
+}
+header nav .actions button:hover {
+  color: #ee2a7b;
+  border: 1px solid #ee2a7b;
 }
 header nav .actions .menu-button {
   display: none;
@@ -260,7 +279,7 @@ main .hero_section .hero_content .img::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(16, 16, 16, 0.8941176471);
+  background: rgba(16, 16, 16, 0.7843137255);
 }
 main .hero_section .hero_content .img img {
   width: 100%;
@@ -537,7 +556,7 @@ main .our_services .service_card img {
   margin-bottom: 12px;
 }
 main .best_projects {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 main .best_projects h2 {
   text-align: center;
@@ -548,14 +567,149 @@ main .best_projects p {
   color: #777;
 }
 main .best_projects .view_more {
-  margin: 12px auto;
-  padding: 12px 32px;
+  margin: 16px auto;
+  padding: 8px 32px;
   display: block;
   width: -moz-fit-content;
   width: fit-content;
   background: #231f20;
   color: #fff;
   border-radius: 40px;
+  transition: 0.3s ease-in-out;
+}
+main .best_projects .view_more:hover {
+  background: #ee2a7b;
+}
+main .faqs_section {
+  padding: 60px 0;
+  background: #fafafa;
+}
+main .faqs_section h2 {
+  text-align: center;
+  color: #231f20;
+}
+main .faqs_section p {
+  text-align: center;
+  color: #777;
+}
+main .faqs_section .faq_side_content {
+  display: flex;
+  flex-direction: column;
+}
+main .faqs_section .faq_side_content img {
+  height: 340px;
+}
+main .faqs_section .faq_side_content p {
+  margin: 0;
+}
+main .faqs_section .faq_side_content a {
+  margin: 16px auto;
+  padding: 8px 32px;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #231f20;
+  color: #fff;
+  border-radius: 40px;
+  transition: 0.3s ease-in-out;
+}
+main .faqs_section .faq_side_content a:hover {
+  background: #ee2a7b;
+}
+main .faqs_section .accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main .faqs_section .accordion .accordion-item {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 0;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  transition: 0.3s ease-in-out;
+  background: #fff;
+  box-shadow: rgba(99, 99, 99, 0.074) 0px 2px 8px 0px;
+}
+main .faqs_section .accordion .accordion-item.active {
+  background: #ee2a7b;
+}
+main .faqs_section .accordion .accordion-item.active button {
+  color: #fff !important;
+}
+main .faqs_section .accordion .accordion-item.active::after {
+  color: #fff !important;
+}
+main .faqs_section .accordion .accordion-item .accordion-button {
+  box-shadow: none !important;
+  background: transparent !important;
+  color: #231f20 !important;
+  text-align: start;
+}
+main .faqs_section .accordion .accordion-item .accordion-button::after {
+  content: "\f00d";
+  font-family: "Font Awesome 6 Pro";
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  transform: rotate(135deg);
+  transform-origin: center;
+}
+main .faqs_section .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+  transform: rotate(0deg);
+}
+main .faqs_section .accordion .accordion-item .accordion-body {
+  background: transparent !important;
+}
+main .faqs_section .accordion .accordion-item .accordion-body p {
+  color: #fff !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  margin: 0;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
+}
+main .blogs_section {
+  padding: 60px 0;
+}
+main .blogs_section h2 {
+  text-align: center;
+  color: #231f20;
+}
+main .blogs_section p {
+  text-align: center;
+  color: #777;
+}
+main .clients_section {
+  padding: 60px 0;
+  background: #fafafa;
+}
+main .clients_section h2 {
+  text-align: center;
+  color: #231f20;
+}
+main .clients_section h2 span {
+  color: #ee2a7b;
+}
+main .clients_section p {
+  text-align: center;
+  color: #777;
+}
+main .clients_section .logo {
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+main .clients_section .logo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .project_card {
@@ -577,7 +731,7 @@ main .best_projects .view_more {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.01) 1%, rgb(0, 0, 0) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.01) 1%, rgb(238, 42, 123) 100%);
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -610,4 +764,53 @@ main .best_projects .view_more {
 }
 .project_card .content .tags span:last-child::after {
   display: none;
+}
+
+.blog_card {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.blog_card .img {
+  width: 100%;
+  position: relative;
+}
+.blog_card .img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 3/2;
+  border-radius: 16px;
+}
+.blog_card .img::after {
+  content: "";
+  position: absolute;
+  border-radius: 16px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 16, 16, 0.5647058824);
+}
+.blog_card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.blog_card .content p {
+  text-align: start;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  margin: 0;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
+}
+.blog_card .content a {
+  color: #231f20;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }/*# sourceMappingURL=style.css.map */

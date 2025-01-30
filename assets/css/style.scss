@@ -111,11 +111,30 @@ header {
       display: flex;
       align-items: center;
       gap: 12px;
+      .company_file {
+        padding: 6px 24px;
+        color: $white;
+        background: $main;
+        border-radius: 40px;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          background: $second;
+        }
+      }
       button {
         color: $main;
         font-weight: 500;
         font-size: 1.1rem;
         line-height: normal;
+        height: 39.2px;
+        width: 39.2px;
+        border-radius: 50%;
+        border: 1px solid $main;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          color: $second;
+          border: 1px solid $second;
+        }
       }
       .menu-button {
         display: none;
@@ -163,7 +182,7 @@ main {
           left: 0;
           width: 100%;
           height: 100%;
-          background: #101010e4;
+          background: #101010c8;
         }
         img {
           width: 100%;
@@ -437,7 +456,7 @@ main {
   }
 
   .best_projects {
-    padding: 80px 0;
+    padding: 60px 0;
     h2 {
       text-align: center;
       color: $main;
@@ -447,13 +466,146 @@ main {
       color: $gray;
     }
     .view_more {
-      margin: 12px auto;
-      padding: 12px 32px;
+      margin: 16px auto;
+      padding: 8px 32px;
       display: block;
       width: fit-content;
       background: $main;
       color: $white;
       border-radius: 40px;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        background: $second;
+      }
+    }
+  }
+
+  .faqs_section {
+    padding: 60px 0;
+    background: $lightbg;
+    h2 {
+      text-align: center;
+      color: $main;
+    }
+    p {
+      text-align: center;
+      color: $gray;
+    }
+    .faq_side_content {
+      display: flex;
+      flex-direction: column;
+      img {
+        height: 340px;
+      }
+      p {
+        margin: 0;
+      }
+      a {
+        margin: 16px auto;
+        padding: 8px 32px;
+        display: block;
+        width: fit-content;
+        background: $main;
+        color: $white;
+        border-radius: 40px;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          background: $second;
+        }
+      }
+    }
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .accordion-item {
+        border-radius: 16px;
+        overflow: hidden;
+        border: 0;
+        backdrop-filter: blur(6px);
+        transition: 0.3s ease-in-out;
+        background: $white;
+        box-shadow: rgba(99, 99, 99, 0.074) 0px 2px 8px 0px;
+        &.active {
+          background: $second;
+          button {
+            color: $white !important;
+          }
+          &::after {
+            color: $white !important;
+          }
+        }
+        .accordion-button {
+          box-shadow: none !important;
+          background: transparent !important;
+          color: $main !important;
+          text-align: start;
+          &::after {
+            content: "\f00d";
+            font-family: "Font Awesome 6 Pro";
+            background: none;
+            @include centerFlex();
+            font-size: 16px;
+            font-weight: 400;
+            transform: rotate(135deg);
+            transform-origin: center;
+          }
+          &:not(.collapsed)::after {
+            transform: rotate(0deg);
+          }
+        }
+        .accordion-body {
+          background: transparent !important;
+          p {
+            color: $white !important;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            margin: 0;
+            -webkit-box-orient: vertical;
+            overflow-y: hidden;
+          }
+        }
+      }
+    }
+  }
+
+  .blogs_section {
+    padding: 60px 0;
+    h2 {
+      text-align: center;
+      color: $main;
+    }
+    p {
+      text-align: center;
+      color: $gray;
+    }
+  }
+
+  .clients_section {
+    padding: 60px 0;
+    background: $lightbg;
+    h2 {
+      text-align: center;
+      color: $main;
+      span {
+        color: $second;
+      }
+    }
+    p {
+      text-align: center;
+      color: $gray;
+    }
+    .logo {
+      padding: 10px;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1/1;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
     }
   }
 }
@@ -479,7 +631,7 @@ main {
       to bottom,
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0.01) 1%,
-      rgb(0, 0, 0) 100%
+      rgb(238, 42, 123) 100%
     );
     padding: 24px;
     display: flex;
@@ -512,6 +664,54 @@ main {
           display: none;
         }
       }
+    }
+  }
+}
+
+.blog_card {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid $stroke;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .img {
+    width: 100%;
+    position: relative;
+    img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 3 / 2;
+      border-radius: 16px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 16px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #10101090;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    p {
+      text-align: start;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      margin: 0;
+      -webkit-box-orient: vertical;
+      overflow-y: hidden;
+    }
+    a {
+      color: $main;
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
   }
 }
