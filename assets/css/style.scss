@@ -91,6 +91,10 @@ header {
       a {
         color: $main;
         font-size: 18px;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          color: $second;
+        }
       }
     }
     .layer {
@@ -160,6 +164,7 @@ header {
 }
 
 main {
+  min-height: calc(100vh - 400px);
   &.main_fixed {
     margin-top: 118px;
   }
@@ -791,6 +796,90 @@ footer {
           color: $white;
         }
       }
+    }
+  }
+}
+
+.contact_page {
+  padding: 80px 0;
+  .contact_info {
+    span {
+      color: $white;
+      padding: 4px 12px;
+      background: $second;
+      border-radius: 40px;
+      margin-bottom: 16px;
+      display: block;
+      width: fit-content;
+    }
+    h2 {
+      color: $main;
+      font-size: 48px;
+    }
+    .blocks {
+      margin-top: 16px;
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      .block {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        a {
+          color: $main;
+          transition: 0.3s ease-in-out;
+          
+          &:hover {
+            color: $second;
+          }
+        }
+        h6 {
+          margin-top: 24px;
+          color: $main;
+        }
+        .socials {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+        }
+      }
+    }
+  }
+
+  form {
+    padding: 24px;
+    border: 1px solid $stroke;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .input_field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      input,
+      textarea {
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid $stroke;
+      }
+    }
+  }
+  button {
+    width: fit-content;
+    padding: 8px 0;
+    border-radius: 80px;
+    background: $main;
+    color: $white;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    margin-top: 12px;
+    i {
+      transform: scale(-1);
+    }
+    &:hover {
+      background: $second;
     }
   }
 }
