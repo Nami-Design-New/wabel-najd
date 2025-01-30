@@ -828,7 +828,7 @@ footer {
         a {
           color: $main;
           transition: 0.3s ease-in-out;
-          
+
           &:hover {
             color: $second;
           }
@@ -882,4 +882,8 @@ footer {
       background: $second;
     }
   }
+}
+
+.portfolio_page {
+  padding: 80px 0;
 }

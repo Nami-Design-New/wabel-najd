@@ -985,4 +985,8 @@ footer .copy_rights .social_media a:hover {
 }
 .contact_page button:hover {
   background: #ee2a7b;
+}
+
+.portfolio_page {
+  padding: 80px 0;
 }/*# sourceMappingURL=style.css.map */
