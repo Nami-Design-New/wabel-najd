@@ -612,39 +612,30 @@ main {
 
 .project_card {
   width: 100%;
-  aspect-ratio: 1;
   border-radius: 16px;
+  background: $lightbg;
   overflow: hidden;
-  position: relative;
   img {
+    aspect-ratio: 1;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   .content {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.01) 1%,
-      rgb(238, 42, 123) 100%
-    );
     padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 8px;
     justify-content: flex-end;
     h6 {
-      color: $white;
+      color: $main;
       margin: 0;
       font-size: 24px;
     }
     .tags {
-      color: $white;
+      color: $main;
       font-size: 16px;
       display: flex;
       gap: 8px;
@@ -657,7 +648,7 @@ main {
           content: "";
           width: 6px;
           height: 6px;
-          background: $white;
+          background: $main;
           border-radius: 50%;
         }
         &:last-child::after {
@@ -712,6 +703,94 @@ main {
       display: flex;
       align-items: center;
       gap: 4px;
+    }
+  }
+}
+
+footer {
+  padding: 60px 0 0;
+  .logo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    img {
+      height: 48px;
+    }
+    p {
+      padding-inline-end: 32px;
+      color: $gray;
+      @media screen and (max-width: 576px) {
+        padding-inline-end: 0;
+      }
+    }
+  }
+  .col_info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    h3 {
+      color: $main;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        background: $second;
+        border-radius: 4px;
+        width: 15%;
+        bottom: -8px;
+        right: 0;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      li {
+        color: $main;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        a {
+          color: $main;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            color: $second;
+          }
+        }
+      }
+    }
+  }
+  .copy_rights {
+    padding: 24px 0;
+    margin-top: 24px;
+    border-top: 1px solid $stroke;
+    @include space-between();
+    p {
+      color: $main;
+      margin: 0;
+      font-size: 18px;
+    }
+    .social_media {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      a {
+        transition: 0.3s ease-in-out;
+        border: 1px solid $stroke;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $main;
+        &:hover {
+          background: $main;
+          color: $white;
+        }
+      }
     }
   }
 }
