@@ -176,7 +176,22 @@ const skills = new Swiper(".skills_slider", {
       slidesPerView: 2,
     },
     0: {
-      slidesPerView: 1,
+      slidesPerView: 2,
     },
   },
 });
+
+const share = () => {
+  if (navigator.share) {
+    navigator
+      .share({
+        title: "مستجدات قانون العمل السعودي",
+        text: "مستجدات قانون العمل السعودي",
+        url: window.location.href,
+      })
+      .then(() => t("Shared successfully"))
+      .catch((error) => t("Error sharing:", error));
+  } else {
+    alert(t("share_not_supported"));
+  }
+};
