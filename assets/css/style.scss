@@ -958,6 +958,74 @@ main {
       }
     }
   }
+
+  .project_details {
+    padding: 60px 0;
+    .images {
+      display: flex;
+      gap: 12px;
+      border-radius: 12px;
+      border: 1px solid $stroke;
+      img {
+        width: 100%;
+        border-radius: 12px;
+      }
+    }
+    .bordered_bx {
+      padding: 16px;
+      border: 1px solid $stroke;
+      border-radius: 16px;
+      background: $lightbg;
+      margin-bottom: 24px;
+      h1 {
+        color: $second;
+      }
+      .view_project {
+        padding: 8px 32px;
+        background: $main;
+        border-radius: 8px;
+        color: $white;
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        gap: 8px;
+      }
+      .buttons {
+        margin-top: 16px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      h4 {
+        margin-bottom: 24px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -8px;
+          right: 0;
+          width: 15%;
+          height: 2px;
+          border-radius: 8px;
+          background: $second;
+        }
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        li {
+          display: flex;
+          gap: 8px;
+          &::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Pro";
+            color: $second;
+          }
+        }
+      }
+    }
+  }
 }
 
 .project_card {

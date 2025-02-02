@@ -1053,6 +1053,74 @@ main .what_we_offer .box p {
   color: #777;
   text-align: start;
 }
+main .project_details {
+  padding: 60px 0;
+}
+main .project_details .images {
+  display: flex;
+  gap: 12px;
+  border-radius: 12px;
+  border: 1px solid #f4f4f4;
+}
+main .project_details .images img {
+  width: 100%;
+  border-radius: 12px;
+}
+main .project_details .bordered_bx {
+  padding: 16px;
+  border: 1px solid #f4f4f4;
+  border-radius: 16px;
+  background: #fafafa;
+  margin-bottom: 24px;
+}
+main .project_details .bordered_bx h1 {
+  color: #ee2a7b;
+}
+main .project_details .bordered_bx .view_project {
+  padding: 8px 32px;
+  background: #231f20;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+}
+main .project_details .bordered_bx .buttons {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+main .project_details .bordered_bx h4 {
+  margin-bottom: 24px;
+  position: relative;
+}
+main .project_details .bordered_bx h4::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+  width: 15%;
+  height: 2px;
+  border-radius: 8px;
+  background: #ee2a7b;
+}
+main .project_details .bordered_bx ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+main .project_details .bordered_bx ul li {
+  display: flex;
+  gap: 8px;
+}
+main .project_details .bordered_bx ul li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Pro";
+  color: #ee2a7b;
+}
 
 .project_card {
   width: 100%;
