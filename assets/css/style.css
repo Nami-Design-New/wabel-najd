@@ -983,6 +983,76 @@ main .skills_section .img {
 main .skills_section .img img {
   height: 70px;
 }
+main .service_benifits {
+  padding: 60px 0;
+  background: #fafafa;
+}
+main .service_benifits h2 {
+  text-align: center;
+  color: #231f20;
+}
+main .service_benifits p {
+  text-align: center;
+  color: #777;
+}
+main .service_benifits .img {
+  width: 100%;
+}
+main .service_benifits .img img {
+  width: 100%;
+  border-radius: 16px;
+}
+main .service_benifits ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding-inline-start: 32px;
+}
+@media screen and (max-width: 576px) {
+  main .service_benifits ul {
+    padding-inline-start: 0;
+  }
+}
+main .service_benifits ul li {
+  display: flex;
+  gap: 12px;
+}
+main .service_benifits ul li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Pro";
+  color: #ee2a7b;
+}
+main .what_we_offer {
+  padding: 60px 0;
+}
+main .what_we_offer h2 {
+  text-align: center;
+  color: #231f20;
+}
+main .what_we_offer p {
+  text-align: center;
+  color: #777;
+}
+main .what_we_offer .box {
+  height: 100%;
+  padding: 24px;
+  border: 1px solid #f4f4f4;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+main .what_we_offer .box h3 {
+  color: #231f20;
+  font-size: 24px;
+  margin: 0;
+}
+main .what_we_offer .box p {
+  margin: 0;
+  font-size: 16px;
+  color: #777;
+  text-align: start;
+}
 
 .project_card {
   width: 100%;
@@ -1233,4 +1303,61 @@ footer .copy_rights .social_media a {
 footer .copy_rights .social_media a:hover {
   background: #231f20;
   color: #fff;
+}
+
+.service_details_header {
+  width: 100%;
+  margin-top: 30px;
+  padding: 32px;
+  border-radius: 24px;
+  background: #ee2a7b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service_details_header .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.service_details_header .text h1 {
+  font-size: 32px;
+  color: #fff;
+  margin: 0;
+}
+.service_details_header .text p {
+  color: #fff;
+  margin-bottom: 24px;
+}
+.service_details_header .text ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.service_details_header .text ul li {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.service_details_header .text ul li i {
+  color: #fff;
+}
+.service_details_header .text a {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #231f20;
+  transition: 0.3s ease-in-out;
+  padding: 8px 32px;
+  background: #fff;
+  border-radius: 24px;
+}
+.service_details_header .img {
+  margin-top: -70px;
+}
+.service_details_header .img img {
+  height: 340px;
 }/*# sourceMappingURL=style.css.map */
