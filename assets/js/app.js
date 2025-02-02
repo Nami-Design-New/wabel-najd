@@ -154,3 +154,29 @@ var partnersSlider = new Swiper(".partnersSlider", {
     },
   },
 });
+
+const skills = new Swiper(".skills_slider", {
+  spaceBetween: 16,
+  centeredSlides: true,
+  slidesPerView: 7,
+  loop: true,
+  speed: 5000,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 7,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    350: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1,
+    },
+  },
+});
