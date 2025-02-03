@@ -370,7 +370,7 @@ main .hero_section .header-images-area .main-images-area .auhtor-icons .elements
   bottom: 140px;
   left: -44px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   main .hero_section .header-images-area {
     display: none;
   }
