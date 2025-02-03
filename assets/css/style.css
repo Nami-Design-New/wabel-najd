@@ -267,6 +267,14 @@ header.sticky .top_bar {
   overflow: hidden;
 }
 
+@keyframes animation-1 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
 main {
   min-height: calc(100vh - 400px);
 }
@@ -275,119 +283,143 @@ main.main_fixed {
 }
 main .hero_section {
   padding: 40px 0;
-}
-main .hero_section .hero_content {
-  width: 100%;
-  height: calc(100dvh - 198px);
-  max-height: 700px;
-  overflow: hidden;
-  border-radius: 32px;
-}
-main .hero_section .hero_content .img {
-  height: 100%;
+  background: url("../images/header.png");
+  background-size: cover;
+  background-position: center;
   position: relative;
+  height: calc(100dvh - 118px);
 }
-main .hero_section .hero_content .img::after {
-  content: "";
+@media screen and (max-width: 576px) {
+  main .hero_section {
+    height: auto;
+  }
+}
+main .hero_section .element1 {
   position: absolute;
-  top: 0;
+  top: 20vh;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(16, 16, 16, 0.7843137255);
+  width: -moz-fit-content;
+  width: fit-content;
+  animation-name: animation-1;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
-main .hero_section .hero_content .img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main .hero_section .hero_content .swiper {
-  height: 100%;
-}
-main .hero_section .hero_content .swiper-slide {
+main .hero_section .header-images-area {
   position: relative;
-}
-main .hero_section .hero_content .swiper-slide .info {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   width: 100%;
-  padding: 0 200px;
+}
+main .hero_section .header-images-area .main-images-area {
+  position: relative;
+  width: 100%;
+}
+main .hero_section .header-images-area .main-images-area .img1 {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 4px;
 }
-@media screen and (max-width: 992px) {
-  main .hero_section .hero_content .swiper-slide .info {
-    padding: 0 32px;
-  }
+main .hero_section .header-images-area .main-images-area .img1 img {
+  width: 60%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-@media screen and (max-width: 576px) {
-  main .hero_section .hero_content .swiper-slide .info {
-    padding: 0 16px;
-  }
-}
-main .hero_section .hero_content .swiper-slide .info span {
-  color: #fff;
-}
-main .hero_section .hero_content .swiper-slide .info h1 {
-  text-align: center;
-  font-size: 48px;
-  color: #fff;
-}
-main .hero_section .hero_content .swiper-slide .info p {
-  text-align: center;
-  color: #fff;
-  width: min(800px, 100%);
-}
-main .hero_section .hero_content .swiper-slide .info .btns {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-top: 12px;
-}
-main .hero_section .hero_content .swiper-slide .info a {
-  border: 1px solid #fff;
-  color: #fff;
-  font-size: 14px;
-  padding: 8px 32px;
-  border-radius: 40px;
-  position: relative;
-  transition: 0.3s ease-in-out;
-  overflow: hidden;
-  isolation: isolate;
-}
-main .hero_section .hero_content .swiper-slide .info a::after {
-  content: "";
+main .hero_section .header-images-area .main-images-area .img2 {
   position: absolute;
   top: 0;
-  right: -100%;
-  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .hero_section .header-images-area .main-images-area .img2 img {
+  width: 80%;
+  border-radius: 50%;
+}
+main .hero_section .header-images-area .main-images-area .icons-area {
   width: 100%;
   height: 100%;
-  z-index: -1;
-  transition: 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
 }
-main .hero_section .hero_content .swiper-slide .info a:hover {
+main .hero_section .header-images-area .main-images-area .icons-area .sound-icons1 {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  animation-name: animation-1;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+main .hero_section .header-images-area .main-images-area .icons-area .lite-icons1 {
+  position: absolute;
+  top: 40%;
+  right: -20px;
+  animation-name: animation-1;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+main .hero_section .header-images-area .main-images-area .auhtor-icons .elements2 {
+  position: absolute;
+  top: 0;
+  right: 110px;
+}
+main .hero_section .header-images-area .main-images-area .auhtor-icons .elements3 {
+  position: absolute;
+  bottom: 140px;
+  left: -44px;
+}
+@media screen and (max-width: 576px) {
+  main .hero_section .header-images-area {
+    display: none;
+  }
+}
+main .hero_section .content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+main .hero_section .content h6 {
+  padding: 4px 16px;
+  color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 40px;
+  background: #ee2a7b;
+}
+main .hero_section .content h1 {
+  width: min(550px, 100%);
+  color: #231f20;
+  font-size: 36px;
+  font-weight: 600;
+}
+main .hero_section .content p {
+  padding-inline-end: 24px;
+}
+@media screen and (max-width: 576px) {
+  main .hero_section .content p {
+    padding: 0;
+  }
+}
+main .hero_section .content .buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+main .hero_section .content .buttons a {
+  padding: 8px 32px;
+  background: #ee2a7b;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 40px;
+}
+main .hero_section .content .buttons a:last-child {
   color: #ee2a7b;
-}
-main .hero_section .hero_content .swiper-slide .info a:hover::after {
-  right: 0;
-}
-main .hero_section .hero_content .swiper-slide.swiper-slide-active .info span {
-  animation: fadeInUpSlider 1s 0.25s both;
-}
-main .hero_section .hero_content .swiper-slide.swiper-slide-active .info h1 {
-  animation: fadeInUpSlider 1s 0.5s both;
-}
-main .hero_section .hero_content .swiper-slide.swiper-slide-active .info p {
-  animation: fadeInUpSlider 1s 0.75s both;
-}
-main .hero_section .hero_content .swiper-slide.swiper-slide-active .info a {
-  animation: fadeInUpSlider 1s 1s both;
+  background: none;
+  border-color: #ee2a7b;
 }
 main .about_us_section {
   padding: 40px 0 60px;
