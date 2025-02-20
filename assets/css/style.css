@@ -282,12 +282,11 @@ main.main_fixed {
   margin-top: 118px;
 }
 main .hero_section {
-  padding: 40px 0;
+  padding: 100px 0;
   background: url("../images/header.png");
   background-size: cover;
   background-position: center;
   position: relative;
-  height: calc(100dvh - 118px);
 }
 @media screen and (max-width: 576px) {
   main .hero_section {
